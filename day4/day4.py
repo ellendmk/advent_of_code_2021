@@ -16,8 +16,8 @@ def play_bingo(calls, board_list, part):
             if (
                 SUCCESS_PRODUCT in np.prod(b, axis=1)
                 or SUCCESS_PRODUCT in np.prod(b, axis=0)
-                or SUCCESS_SUM in np.prod(b, axis=1)
-                or SUCCESS_SUM in np.prod(b, axis=0)
+                or SUCCESS_SUM in np.sum(b, axis=1)
+                or SUCCESS_SUM in np.sum(b, axis=0)
             ):
                 if part == PART_1:
                     b[np.where(b == MARKER)] = 0
